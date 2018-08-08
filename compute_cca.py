@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 import pickle
 from collections import Counter
@@ -28,7 +29,7 @@ def make_dictionary(dict_filename):
 	dictionary = {}
 	for line in dict_file.readlines():
 		words = line.split()
-		dictionary[words[1]] = words[0]
+		dictionary[words[1].decode("utf-8")] = words[0]
 	return dictionary
 
 # Translate a list of Chinese nouns into English
